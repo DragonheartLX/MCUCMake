@@ -1,0 +1,7 @@
+# Clangd
+.cache/
+
+# CMake
+build/
+install/
+CMakeUserPresets.json

@@ -1,0 +1,22 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "MSPM0G3507",
+            "cwd": "${workspaceRoot}/build",
+            "executable": "${command:cmake.launchTargetPath}",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "openocd",
+            "configFiles": [
+                "./interface/cmsis-dap.cfg",
+                "./target/ti_mspm0.cfg"
+            ],
+            "searchDir": [
+                "./Scripts"
+            ],
+            "showDevDebugOutput": "raw",
+            "deviceName": "MSPM0G3507"
+        }
+    ]
+}

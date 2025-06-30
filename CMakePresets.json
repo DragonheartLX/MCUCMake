@@ -1,0 +1,36 @@
+{
+    "version": 8,
+    "configurePresets": [
+        {
+            "name": "MSPM0G3507-base",
+            "hidden": true,
+            "binaryDir": "${sourceDir}/build",
+            "generator": "Ninja",
+            "cacheVariables": {
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/install/${presetName}",
+                "CMAKE_C_COMPILER": "arm-none-eabi-gcc",
+                "CMAKE_CXX_COMPILER": "arm-none-eabi-g++",
+                "MSPM0_SDK_ROOT": "/path/to/mspm0_sdk",
+                "SYSCONFIG_ROOT": "/path/to/sysconfig"
+            }
+        },
+        {
+            "name": "MSPM0G3507-debug",
+            "displayName": "MSPM0G3507 Debug arm-none-eabi",
+            "description": "MSPM0G3507 Debug",
+            "inherits": "MSPM0G3507-base",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug"
+            }
+        },
+        {
+            "name": "MSPM0G3507-release",
+            "displayName": "MSPM0G3507 Release arm-none-eabi",
+            "description": "MSPM0G3507 Release",
+            "inherits": "MSPM0G3507-base",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release"
+            }
+        }
+    ]
+}
